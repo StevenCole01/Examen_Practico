@@ -1,7 +1,5 @@
-#Antonio Contreras
 from socketserver import BaseRequestHandler, UDPServer
 import time
-
 
 class GestorSolicitudes(BaseRequestHandler): #La clase hereda del metodo BaseRequestHandler
 
@@ -15,7 +13,6 @@ class GestorSolicitudes(BaseRequestHandler): #La clase hereda del metodo BaseReq
         if usuario == "receptor": # Toda esta sección es para almacenar la ip del receptor
             if self.client_address not in ip:
                 ip.append(self.client_address)
-
 
 if __name__ == "__main__": #Metodo para iniciar el programa
     ip = [] #arreglo para guardar las ips
